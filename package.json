@@ -8,10 +8,10 @@
     "node": ">=5",
     "npm": ">=3"
   },
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "publish": "node bot-deploy.js",
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
   "license": "MIT",
   "dependencies": {
