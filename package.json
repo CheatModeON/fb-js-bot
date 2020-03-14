@@ -1,5 +1,5 @@
 {
-  "name": "isitup-bot",
+  "name": "viber-js-bot",
   "version": "1.0.1",
   "description": "A bot interface to work with Viber API",
   "author": "Itamar",
@@ -10,7 +10,6 @@
   },
   "main": "index.js",
   "scripts": {
-    "publish": "node bot-deploy.js",
     "start": "node index.js"
   },
   "license": "MIT",
