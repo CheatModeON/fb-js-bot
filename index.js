@@ -79,4 +79,4 @@ bot.onTextMessage(/./, (message, response) => {
     checkUrlAvailability(response, message.text);
 });
 
-http.createServer(bot.middleware()).listen(process.env.PORT||5000, () => bot.setWebhook(process.env.URL || "https://viber-js-bot.azurewebsites.net"));
+http.createServer(bot.middleware()).listen(process.env.PORT||5000, () => bot.setWebhook(process.env.URL || "viber-js-bot.azurewebsites.net" || "viber-js-bot.scm.azurewebsites.net:443"));
