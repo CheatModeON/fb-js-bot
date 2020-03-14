@@ -56,11 +56,6 @@ function checkUrlAvailability(botResponse, urlToCheck) {
 
 const logger = createLogger();
 
-if (!process.env.VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY) {
-    logger.debug('Could not find the Viber account access token key in your environment variable. Please make sure you followed readme guide.');
-    return;
-}
-
 // Creating the bot with access token, name and avatar
 const bot = new ViberBot(logger, {
     authToken: "4b352455f127dc7d-abf771323d3e435f-95efbc9daeaf7b85", 
