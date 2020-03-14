@@ -84,22 +84,4 @@ bot.onTextMessage(/./, (message, response) => {
     checkUrlAvailability(response, message.text);
 });
 
-if (process.env.NOW_URL || process.env.HEROKU_URL) {
-    const http = require('http');
-    const port = process.env.PORT || 8080;
-
-    http.createServer(bot.middleware()).listen(port, () => bot.setWebhook(process.env.NOW_URL || process.env.HEROKU_URL));
-} else {
-    logger.debug('Could not find the now.sh/Heroku environment variables. Trying to use the local ngrok server.');
-    return ngrok.getPublicUrl().then(publicUrl => {
-        const http = require('http');
-        const port = process.env.PORT || 8080;
-
-        http.createServer(bot.middleware()).listen(port, () => bot.setWebhook(publicUrl));
-
-    }).catch(error => {
-        console.log('Can not connect to ngrok server. Is it running?');
-        console.error(error);
-        process.exit(1);
-    });
-}
+http.createServer(bot.middleware()).listen(process.env.PORT||5000, () => bot.setWebhook(process.env.URL || "https://viber-js-bot.azurewebsites.net"));
