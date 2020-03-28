@@ -1,13 +1,6 @@
 {
   "name": "viber-js-bot",
   "version": "1.0.1",
-  "description": "A bot interface to work with Viber API",
-  "author": "AP",
-  "repository": "https://github.com/CheatModeON/viber-js-bot",
-  "engines": {
-    "node": ">=5",
-    "npm": ">=3"
-  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
