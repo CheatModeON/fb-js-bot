@@ -66,7 +66,7 @@ const bot = new ViberBot(logger, {
 
 // The user will get those messages on first registration
 bot.onSubscribe(response => {
-    say(response, 'Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me if a web site is down for everyone or just you. Just send me a name of a website and I'll do the rest!');
+    say(response, 'Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me if a web site is down for everyone or just you. Just send me a name of a website and I will do the rest!');
 });
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
