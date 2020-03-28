@@ -80,4 +80,4 @@ bot.onTextMessage(/./, (message, response) => {
     checkUrlAvailability(response, message.text);
 });
 
-http.createServer(bot.middleware()).listen(5000, () => bot.setWebhook("https://viber-js-bot.azurewebsites.net"));
+http.createServer(bot.middleware()).listen(5000, () => bot.setWebhook("https://viber-bot.azurewebsites.net"));
