@@ -66,13 +66,13 @@ const bot = new ViberBot(logger, {
 
 // The user will get those messages on first registration
 bot.onSubscribe(response => {
-    say(response, `Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me if a web site is down for everyone or just you. Just send me a name of a website and I'll do the rest!`);
+    say(response, 'Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me if a web site is down for everyone or just you. Just send me a name of a website and I'll do the rest!');
 });
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     // This sample bot can answer only text messages, let's make sure the user is aware of that.
     if (!(message instanceof TextMessage)) {
-        say(response, `Sorry. I can only understand text messages.`);
+        say(response, 'Sorry. I can only understand text messages.');
     }
 });
 
